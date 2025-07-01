@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Creative Works</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo active social-icons">
+                <a href="home.html" class="nav-link active ">
+                    <i class="fa-solid fa-house fa-lg" style="color: #ffffff;"></i>
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="home.html" class="nav-link ">Home</a></li>
+                <li><a href="portfolio.html" class="nav-link active">Portfolio</a></li>
+                <li><a href="about.html" class="nav-link ">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+    <!-- Portfolio Grid View -->
+    <div id="portfolioView" class="portfolio-container slide-down">
+        <header class="header">
+            <h1 class="main-title">My Portfolio</h1>
+        </header>
+
+        <div id="projectGrid" class="projects-grid">
+            <!-- Projects will be dynamically loaded here -->
+        </div>
+    </div>
+        <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2025 OmarShadyy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Project Detail View -->
+    <main>
+        <div id="projectDetail" class="project-detail hidden">
+
+            <div class="detail-content">
+                <div class="detail-header">
+                    <h1 id="detailTitle" class="detail-title"></h1>
+                    <p id="detailBrief" class="detail-brief"></p>
+                </div>
+
+                <div id="detailMedia" class="media-gallery">
+                    <!-- Media will be dynamically loaded here -->
+                </div>
+
+                <div class="project-story">
+                    <h2>Project Story</h2>
+                    <div id="detailStory" class="story-content"></div>
+                </div>
+            </div>
+
+            <!-- Back button moved to the end -->
+            <div class="back-button-container">
+                <button id="backButton" class="back-button">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 12H5M12 19l-7-7 7-7" />
+                    </svg>
+                    Back to Portfolio
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Image Lightbox -->
+    <div id="imageLightbox" class="lightbox hidden">
+        <div class="lightbox-overlay"></div>
+        <div class="lightbox-content">
+            <button id="closeLightbox" class="lightbox-close">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 6L6 18M6 6l12 12" />
+                </svg>
+            </button>
+
+            <button id="prevImage" class="lightbox-nav lightbox-prev">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M15 18l-6-6 6-6" />
+                </svg>
+            </button>
+
+            <button id="nextImage" class="lightbox-nav lightbox-next">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 18l6-6-6-6" />
+                </svg>
+            </button>
+
+            <div class="lightbox-image-container">
+                <img id="lightboxImage" class="lightbox-image" src="" alt="">
+                <div class="lightbox-caption"></div>
+            </div>
+
+            <div class="lightbox-counter">
+                <span id="imageCounter"></span>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="projects.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
