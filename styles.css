@@ -1489,6 +1489,18 @@ body {
     .portfolio-container {
         padding: 1rem;
     }
+    .project-detail {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: #000;
+        z-index: 1000;
+        overflow-y: auto;
+        padding: 1rem; /* reduced padding for smaller screen */
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
 
     .main-title {
         font-size: 2.5rem;
@@ -1542,6 +1554,7 @@ body {
     .lightbox-counter {
         bottom: 1rem;
     }
+    
 }
 
 @media (max-width: 480px) {
